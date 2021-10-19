@@ -1,19 +1,19 @@
 import React from 'react'
 
-function Title(props){
+function App(){
   return (
-    <React.Fragment>
-      <h1>{props.children} 1</h1>
-      <h2>{props.children} 2</h2>
-    </React.Fragment>
+    <Title>
+      <span>Texto tag</span>
+      texto
+      {['um', 'dois', 3, false, <h1>Texto tag</h1>]}
+    </Title>
   )
 }
 
-function App({children}){
-
+function Title(props){
   return (
     <div>
-      <Title>Meu app</Title>
+      {props.children}
     </div>
   )
 }
