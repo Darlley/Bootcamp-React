@@ -1,20 +1,27 @@
-import React from 'react'
+import React, {useState, InputHTMLAttributes} from 'react'
 
 function App(){
-  return (
-    <Title>
-      <span>Texto tag</span>
-      texto
-      {['um', 'dois', 3, false, <h1>Texto tag</h1>]}
-    </Title>
-  )
-}
 
-function Title(props){
+  const [inputValue, setInputValue] = useState('')
+  console.log(`inputValue (estado): ${inputValue}`)
+
+  function handleChange(event){
+    const targetInputValue = Number(event.target.value)
+    // console.log(`inputValue (component): ${targetInputValue}`)
+    console.log(typeof targetInputValue)
+    if(!isNaN(targetInputValue)){
+      setInputValue(targetInputValue)
+    }
+  }
+  function handleClick(){
+    alert(inputValue)
+  }
+
   return (
-    <div>
-      {props.children}
-    </div>
+    <form>
+      <input value={inputValue} onChange={handleChange} />
+      <button type="" onClick={handleClick}>Enviar</button>
+    </form>
   )
 }
 
