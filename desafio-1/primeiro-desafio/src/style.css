@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+}
+
+body{
+  background-color: #e3fbff;
+  padding: 0;
+}
+
+#root{
+  display: grid;
+  grid-template:
+  "header header header"
+  "nav    nav    nav"
+  "aside  main   main"
+  "footer footer footer";
+  gap: 5px;
+}
+
+header, main, nav, aside, footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+header{
+  text-align: center;
+  grid-area: header;
+}
+nav{
+  grid-area: nav;
+}
+aside{
+  height: 400px;
+  grid-area: aside;
+}
+main{
+  height: 400px;
+  grid-area: main;
+}
+footer{
+  height: 80px;
+  grid-area: footer;
+  padding: 2px;
+}
