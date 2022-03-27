@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula01</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .header{
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0e0e0e;
+    }
+    .titulo {
+      color: #fff;
+      text-transform: uppercase;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div data-js="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script>
+    const Titulo = React.createElement('h1', { className : 'titulo' }, 'Brain.co')
+    const Header = React.createElement( 
+      'header', {
+        className: 'header',
+        children: Titulo
+      }
+    )
+
+    ReactDOM.render(Header, document.querySelector('[data-js="root"]'))
+  </script>
+</body>
+</html>
