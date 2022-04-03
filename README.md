@@ -13,7 +13,7 @@
 | 06 | Props e atributosespeciaisdo HTML no JSX       | ✔️ |
 | 07 | Prop "children" e composição de componentes    | ✔️ |
 | 08 | Listas (arrays) e a prop "key"                 | ✔️ |
-| 09 | Introdução à eventos no React.js (onClick)     |   |
+| 09 | Introdução à eventos no React.js (onClick)     | ✔️ |
 | 10 | Introdução à estados no React.js (useState)    |   |
 | 11 | Renderização condicional                       |   |
 | 12 | Formulários controlados e não controlados      |   |
