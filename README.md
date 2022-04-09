@@ -15,7 +15,7 @@
 | 08 | Listas (arrays) e a prop "key"                 | ✔️ |
 | 09 | Introdução à eventos no React.js (onClick)     | ✔️ |
 | 10 | Introdução à estados no React.js (useState)    | ✔️ |
-| 11 | Renderização condicional                       |   |
+| 11 | Renderização condicional                       | ✔️ |
 | 12 | Formulários controlados e não controlados      |   |
 | 13 | Pureza, imutabilidade e estados assíncronos    |   |
 | 14 | Lifecycle dos componentes e fluxo de dados     |   |
