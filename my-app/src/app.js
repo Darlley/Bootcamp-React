@@ -1,25 +1,42 @@
-import { useState } from "react"
+import {useState} from "react"
 
-const App = () => {
-  const [counter, setCounter] = useState(0)
-  // const counter = state[0]
-  // const setState = state[1]
+export default function App() {
+  const [value, setValue] = useState(null);
+  const [name, setName] = useState(null)
 
-  function incrementar(){
-    setCounter(counter + 1)
+  function somar(){
+    setValue(value+1)
   }
-
-  function decrementar(){
-    setCounter(counter - 1)
+  function subtrair(){
+    setValue(value-1)
+  }
+  function falar(){
+    setName("Olá Darlley")
   }
 
   return (
     <>
-      <h1>Contador: {counter}</h1>
-      <button onClick={incrementar}>+</button>
-      <button onClick={decrementar}>-</button>
+    <div>
+      <p>{name}</p>
+      <button onClick={falar}>Falar</button>
+    </div>
+    <div>
+      {value === null ? <h1>Contador vazio</h1> : <h1>Contador: {value}</h1> }
+      <h1>{value === null ? 'Contador vazio' : `Contador: ${value}` }</h1>
+
+      <h1>
+        {value === null && "Contador vazio"}
+        {value !== null && `Contador: ${value}`}
+      </h1>
+
+      <h1>
+        {!value && "Contador vazio"}
+        {!!value && `Contador: ${value}`}
+      </h1>
+
+      <button onClick={somar}>+</button>
+      <button onClick={subtrair}>-</button>
+    </div>
     </>
   )
 }
-
-export default App;
